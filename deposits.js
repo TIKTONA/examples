@@ -11,7 +11,7 @@ So you are accepting payments (deposits) in Toncoins:
 
 3. You tell the user - please send N Toncoins to my wallet address with UUID as text comment.
    You can use a deeplink, by clicking on which the user will open the wallet app with all the fields filled in, if the wallet app is installed.
-   ton://transfer/<wallet_address>?amount=<amount_in_nano>&text=<uuid>
+   ton://transfer/<UQBnyPNU04tjirOdvdw3FcPtv1AHwjxYYLA-YKX0XkhCLoAX>?amount=<amount_in_nano>&text=<uuid>
 
 4. Your backend constantly periodically requests a list of your wallet transactions.
 
@@ -58,5 +58,5 @@ const onTransaction = async (tx) => {
     }
 }
 
-const accountSubscription = new AccountSubscription(tonweb, MY_WALLET_ADDRESS, 0, onTransaction);
+const accountSubscription = new AccountSubscription(tonweb, UQBnyPNU04tjirOdvdw3FcPtv1AHwjxYYLA-YKX0XkhCLoAX, 50, onTransaction);
 accountSubscription.start();
